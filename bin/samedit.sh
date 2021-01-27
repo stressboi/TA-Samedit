@@ -29,8 +29,8 @@ rm sudoout
 
 if [[ $SUDOOUT =~ "sudoedit" ]];
 then
-	echo "$DATETIME src_ip=$IPADD finding='CVE-2021-3156 found. Patch this system.' samedit_status=1 sudo_v=$SUDOVERSION"
+	echo "$DATETIME src_ip=$IPADD finding='CVE-2021-3156 found. Patch this system.' samedit_status=1 sudo_v='$SUDOVERSION'"
 else
-	echo "$DATETIME src_ip=$IPADD finding='CVE-2021-3156 NOT found.' samedit_status=0 sudo_v=$SUDOVERSION"
+	echo "$DATETIME src_ip=$IPADD finding='CVE-2021-3156 NOT found.' samedit_status=0 sudo_v='$SUDOVERSION'"
 fi
 
