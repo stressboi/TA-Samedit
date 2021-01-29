@@ -31,7 +31,10 @@ fi
 # if ubuntu, reset sudo version found to apt output
 if [ -z ${UBUNTUVERSION+x} ]; then SUDOVERSION=$VERSION; else SUDOVERSION=$UBUNTUVERSION; fi
 
-# is this version vuln
+# is this version vuln?
+# list below is "OK" versions and will eventually need to be updated
+# might be better to include in a lookup
+# ubuntu versions from https://ubuntu.com/security/CVE-2021-3156?_ga=2.220498904.1708161991.1611902205-719159346.1611902205
 case $SUDOVERSION in
 	1.9.5p2) VULNSTATUS=OK ;;
 	1.9.4p2-2ubuntu2) VULNSTATUS=OK ;;
