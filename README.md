@@ -2,7 +2,7 @@
 
 Simple Splunk UF detection for Baron Samedit sudo buffer overflow (CVE-2021-3156). Refer to https://blog.qualys.com/vulnerabilities-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit.
 
-1-28-2021: V2: Redid detection to not rely on sudoedit command. V1 (found in bin directory) required UF to run as root! No bueno.
+1-28-2021: V2: Re-did detection to not rely on sudoedit command. V1 (found in bin directory) required UF to run as root! No bueno.
 
 This scripted input captures the version of sudo found on the system and compares to a known-good list of sudo versions. It also takes into account Ubuntu systems that even after patching may still show a sudo --version known to be vulnerable and may therefore result in a false positive detection. 
 
